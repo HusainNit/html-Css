@@ -1,0 +1,322 @@
+<!DOCTYPE html> <!-- to tell the browser it a html 5 docement-->
+
+<html lang="en"> <!-- the mother contaner of the html tags-->
+
+<head><!--contan extra info to the broser to orgnize thing-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><!-- the text here will be display in browser tap-->
+
+    <link rel="" href=""> <!-- use to add additonal thing to the html doc (link other langue (css)||to add favicon to the tap ||link font family from the web)-->
+
+
+
+    <!-- in "href" add the bath of the thing u want to link   -->
+
+    <!-- in "rel" add what the thing u want to add (what it relation to html doc)
+    such as:
+    1.stylesheet
+    2.icon
+    etc...
+    -->
+
+</head><!-- tag close-->
+
+<body><!-- will contain all html tags-->
+
+
+
+
+
+<!-- this 6 tags us for the header of the page (the title)-->
+<h1>    </h1>
+<h2>    </h2>
+<h3>    </h3>
+<h4>    </h4>
+<h5>    </h5>
+<h6>    </h6>
+
+
+
+<!--hyper link (can use in the same page if{one of the tag add to it id and we put the id in the href})-->
+<a href="">     </a>
+
+
+<!-- insert horizental line (horizntal ruler)-->
+<hr>
+
+
+
+<!-- insert line break-->
+<br>
+
+
+
+<!-- for the images-->
+<img src="" alt="">
+<!-- 
+alt     =   to add text to the image (if the image not found it will display the text)
+src     =   to add the path of the image
+-->
+
+
+
+<!--to add preformated text (it preserves both spaces and line breaks)-->
+<pre>   </pre> 
+
+
+
+<!--for the paragraphs-->
+<p>     </p>
+
+
+
+<!--in it own will do noting - it use in css to add effect in some lines -->
+<span>      </span>
+
+
+
+<!--to insert webpages -->
+<iframe src="" frameborder="0"></iframe>
+
+
+
+<!--text formation-->
+<b>     </b><!--bold-->
+
+<i>     </i><!--italic-->
+
+<u>     </u><!--underline-->.
+
+<s>     </s><!--strike through-->
+
+<sup>   </sup><!--superscript [ ^ ]   -->
+
+<sub>   </sub><!--subscript [ _ ]  -->  
+
+<mark>  </mark><!--highlighted text-->
+
+
+
+<!--for the tables --> 
+<table><!--table tag (it start from tr then th|td [so u will fill the data in row direction]) -->
+
+    <caption>   </caption><!--table caption/title-->
+
+    <tr>        </tr><!--table row-->
+
+    <th>        </th><!--table header-->
+
+    <td>        </td><!--table data-->
+
+</table>
+
+
+
+<!-- for the lists (ul||ol inside it li)-->
+<ul>    </ul><!--unordered list-->
+<li>    </li><!--list item-->
+<ol>    </ol><!--ordered list-->
+
+
+
+<!-- for the forms-->
+<form> <!-- start of form tag {user space to insert information} -->
+
+    <label for="">  </label> <!--   connect input - when use screen reader it will connect it to id init and in the oter tag (use with id property - put it in "for") -->
+
+
+    <input type="" > <!--input tag (use to add input field) -->
+
+
+    <button>    </button> <!--button tag (use to add button) (use with php or javaScript) -->
+
+
+    <select>  <!--select tag (use to add drop down list) -->  
+        <optgroup> <!-- to make groups in the selecter area-->>
+            <option>    </option> <!--option tag (use to add option in the drop down list)    [select]        -->
+        </optgroup>
+        
+        <optgroup>
+            <option>    </option> 
+        </optgroup>
+    </select>
+
+
+    <textarea name="" id="" cols="30" rows="10"> <!--textarea tag (use to add text area) - cols and rows to specify it area size-->
+
+    </textarea>
+
+
+    <datalist>  <!--datalist tag (same as select  but it make the user type in it and show the pre-defined list to choose)   [type] -->  
+
+        <option>    </option> <!--option tag (use to add option in the drop down list) -->
+
+    </datalist>
+
+
+    <fieldset>   <!-- to put the data in box same as group bunch of related input or other -->
+        <legend>   </legend> <!--legend tag (use to add title to the fieldset)-->
+    </fieldset> 
+
+</form>
+
+
+
+<!--layout the document (for better control in css)-->
+<header>    </header> <!--use to add the header of the page-->
+
+<nav>       </nav> <!--use to add the navigation bar-->
+
+<main>      </main> <!--use to add the main content of the page (browser use it to recomand site to the other -->
+
+<section>   </section> <!--use to add the section of the page-->
+
+<article>   </article> <!--use to add the article of the page-->
+
+<aside>     </aside> <!--use to add the aside of the page (note || nevgaition par)-->
+
+<footer>    </footer> <!--use to add the footer of the page (contact and other links)-->
+
+<details>   </details> <!--use to add the details of the page-->
+
+<summary>   </summary> <!--use to add the summary of the page-->
+
+<div>       </div> <!--use to group elements together (use with class property)-->
+
+
+
+
+
+
+
+
+
+<!-- for the audio-->
+<audio src="" controls></audio>
+<!--
+src     =   to add the path of the audio
+controls=   to add the controls OF the audio (play, pause, etc...)
+-->
+
+
+
+<!-- for the videos-->
+<video src="" controls></video>
+<!--
+src     =   to add the path of the video
+controls=   to add the controls OF the video (play, pause, etc...)
+-->
+
+
+
+<!-- propertys (optional) ----------------
+
+
+title   - use to when ever the mouse is over content of the tag itself it will display the text inside title property (can add to any tag)
+
+
+
+target  - use to open the link in new tab (can add to <a> tag) 
+{
+    _blank: Opens the linked document in a new window or tab.
+
+    _self: Opens the linked document in the same frame as it was clicked (this is default).
+
+    _parent: Opens the linked document in the parent frame.
+
+    _top: Opens the linked document in the full body of the window.
+}
+
+
+
+href   - [note] must include -- https:// -- in the path of the link or the path of image in local
+
+
+
+width = for the image x axes (no need if we will use css)
+
+height = for the image y axes (no need if we will use css)
+
+
+
+type -      {ul}     -tag [note] it can have "type" attriput to change the type of the list indecater - type="1" (number) - type="a" (lowercase letter) - type="A" (uppercase letter) 
+
+type -      {ol}     -tag [note] it can have "type" attriput to change the type of the list indecater - type="disc" (default) - type="circle" (circle) - type="square" (square)
+
+
+
+colspan - use to merge the columns in the table (can add to <th> and <td> tag)  -merge down 
+
+rowspan - use to merge the rows in the table (can add to <th> and <td> tag) -merge right
+
+align   - use to align the table (left - right - center) - use with <table> tag
+
+
+
+action  -   attribute specifies where to send the form data when a form is submitted (to send the data to the server - php file)
+
+method  -   attribute specifies how to send form data (get or post)
+
+
+
+
+
+
+placeholder  -    attribute specifies a short hint that describes the expected value of an input field (can add to <input> tag - it appears in gray color)
+
+type         -   {input} -  it value = text - radio - checkbox - color - date - email - file - hidden -  month - number - password - range -  tel - time  
+
+type         -   {button} -  it value = button - reset - submit
+
+size         -   {input[select]}  use to set how much of option will be display directory without scroll (can add to <select> tag)
+
+readonly     -   {input}  use to make the input field read only (can add to <input> tag)
+
+
+
+checked  -   {input[radio||checkbox]}  use to make the radio button or checkbox checked (can add to <input> tag)
+
+required     -  attribute specifies that the input field must be filled in before submitting the form (can add to <input> tag)
+
+selected     -  attribute specifies that an option should be pre-selected when the page loads (can add to <option> tag)
+
+
+
+
+
+value   -   it will send to server (use with <option> tag) - good to send short value (such as: "bh","kw",etc...)
+
+name    -   use to connect the choices (radio - checkbox) - to tell the browser that the choices are related to each other OR to collect the data from the input field (using php $_POST[""] , $_GET[""])
+
+
+
+
+id      -   use to connect the input and the label ,   and it use to access the data on input field using server side language (using php $_POST[""] , $_GET[""])    || use to add css effect to the tag  (it need to be unique) - #id - in css
+
+class   -   use to add css effect to the tag (it can be use more than one time) -  .class in css only
+
+
+
+
+
+
+
+min     -   use to set the minimum value of the input field (can add to <input:number> tag)
+max     -   use to set the maximum value of the input field (can add to <input:number> tag)
+
+
+
+
+
+
+
+pattern -   use to validate the input value against a regular expression (can add to <input:text,email,password,number,url,search,tel> tag)  - when the input wrong the title will be display
+
+-->
+
+
+
+
+</body><!-- tag close-->
+</html><!-- tag close-->

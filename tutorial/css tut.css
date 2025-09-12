@@ -1,0 +1,1085 @@
+where-css-can-be-used
+{
+
+    /*extrenal way:(recomnded)
+    in diffrent file ( it link the css file with html file)
+    <link rel="stylesheet" href="style.css"> 
+    */
+
+
+    /*internal way:
+    in html file in the head tag
+    add     <style> </style> 
+      */
+
+
+
+    /*:inlin way:
+    in html tags
+    add  style=" "   in the html tag
+    */
+
+
+};
+
+
+selecters
+{
+    
+    /* to select any tag*/
+    anytag{ }
+
+
+    /*to select any tag inside a specific tag (by adding a space ) - and the space mean select the child of theTag */
+    anytag {}
+
+
+    /*to select multipel tags and we want tp have a defenition for all of them*/
+    tag,tag1,tag2{ }
+
+
+    /*to select a class - every tag have it will be ifected*/
+    .theclass{ }
+
+
+    /*to select specific tag have the class */
+    tag.class{ }
+
+
+    /*to select a tag have an id*/
+    #theid{ }
+
+
+    /*to select a specific tag have an id */
+    tag#theid{ }
+
+
+    /*to select a tag have an id and also class*/
+    #id.theclass{ }
+
+
+    /*to select a specific tag have an id and also class*/
+    tag#id.theclass{ }
+
+
+    /* to select all tags - universal selecter */
+    *{ }
+
+
+
+
+
+
+    /*to select a tags inside a specific tag (by adding a space ) - and the space mean select the child of theTag */
+    theTag p{ }    /*it will select all the p tags*/        /*if we replace p with * it will select every thing inside theTag*/   
+
+
+    /*to select the direct childre to theTags (by adding a > ) - and the > mean select the direct child of the tag (so if theTag inside it a p tag it will get effected ,but if i have anoter section divesier and insed it p tag it will not be effected 'cause it not a direct child to theTag ) */
+    theTag > p{ }   /* it will select all the p tags that a direct child (specific tag)*/       /*if we replace p with * it will select only the direcet childre (not specific tag)*/
+
+
+    /*to select the next tag to a tag (by adding a + ) - and the + mean select the next tag after the tag */
+    theTag + p{ }     /*will select only the direct tag after theTag (select one) */              /*if we replace p with * it will select all the tags after theTag (not recomanded because we have the ~)*/
+
+
+    /*to select the tag that come after theTag (by adding a ~ ) - and the ~ mean select all tags that come after the tag */
+    theTag ~ p{ }      /*will select all the tags after theTag  (select all) */          /*if we replace p with * it will select all the tags after theTag (not specific tag)*/
+
+
+
+
+     /* to select any attriput - like href,disabled,link,for,...etc */
+    [attribute] { }
+
+
+    /*case sensetive*/
+    /*to select any attriput with specific value - like id case or class,input="radio",...etc */
+    [attribute="value"] { } /*in here heed it as exact the = - sod if it have id as "fild1" in html and iput it in css as "filed 1" it will not work (it nedd as exact) */
+
+
+    /* not case sensetive*/
+    /*to select any attriput with posipolty of containing the value - it use when we put an tag in two classes (class="into attriputcas") so if we replace value with "attriputcas" it will only affect the classs have it if another tag have only class "into" it will not be affected   */
+    [attribute~="value"] { }  /*in here it not need to be exact - so if in html as"input-fild1" and in css as "input" it will be aceepted (no need to be the first word it just example), even if there a space betwwen it (keep in mind speleing errors will not work) */
+
+
+    /*there is more but i will not cover them*/
+
+    
+}
+
+
+properties
+{
+    /*to color the content it self*/
+    color: rgba(red, green, blue, alpha);
+
+
+    /*to the color the backfround of the content*/
+    background-color: red;
+
+
+    /*to make the background as image*/
+    background-image: url( theImageAsPng );
+
+
+    /*if the image as background can not cover all the page space we can say to in repet it in specifc way of don do it*/
+    background-repeat: no-repeat; /*can have valuse as= no-repeat / repeat-y / repeat-x */
+
+
+    /*use to say the image move with the scrool or not*/
+    background-attachment: fixed;  /*can have valuse as= fixed / scroll*/
+
+
+    /*we can specify the image location (if the image very big it will be cut)*/
+    background-position: center;  /*can have valuse as= center / left / right / top / bottom / specif value as 10px */
+
+
+    /*to make the image cover the page (use when the image very small as cover or very larg as contain)*/
+    background-size: cover;  /*can have valuse as= cover / contain / specif value as 10px */
+
+
+    /*to make the image as gradient (color to color)*/
+    background-image: linear-gradient(red, green, blue);  /*can have valuse as= linear-gradient(red, green, blue) / radial-gradient(red, green, blue) / repeating-linear-gradient(red, green, blue) / repeating-radial-gradient(red, green, blue) */
+
+
+    /*to make the image as gradient (color to color) with specifc direction(will start in the oppiset direction)*/
+    background-image: linear-gradient(to right bottom, red, green, blue);  /*can have valuse as= to right / to left / to top / to bottom / to right top / to right bottom / to left top / to left bottom or specif value sa angle */
+
+
+
+
+
+    /*to add space between the content and the border (space between me and the border - inside)*/
+    padding: 1rem; /* 1rem=16px */  
+
+    /*
+    4-value syntax:
+        : [top] [right] [bottom] [left];
+
+    2-value syntax:
+        : [top/bottom] [right/left];
+    */
+
+
+    /*to add space between the border and the other content (space between my border and other border - outside )*/
+    margin: 1rem; /* 1rem=16px */  
+
+
+
+    /* property in CSS defines how the width and height of an element are calculated*/
+    box-sizing: border-box;     /*can have value as= content-box / border-box  */
+
+
+
+    /* manipulating the appearance of elements without affecting the layout of the page */
+    transform:translateX(50%); /*can take alot of function*/
+
+
+    /*to add line spacing in the hight between the lines*/
+    line-height: 1erm ; /* 1rem=16px */
+
+
+    /*to add spacing between each letter to each other*/
+    letter-spacing: 1erm;/* 1erem=16px */
+
+
+    /*to decorate the line*/
+    text-decoration: none; /*can have value = overline / line-through / under line*/
+
+
+    /*to transform the text structer*/
+    text-transform: capitalize; /*can have value = capitalize / uppercase */
+
+
+    /*to decide text location (work in x-axis)*/
+    text-align: center; /*can have value= center / left / right */
+
+
+
+    /*to change the font look*/
+    font-family: Times; /*can have value= 'Times New Roman', Times, serif / Arial, Helvetica, sans-serif / 'Courier New', Courier, monospace / 'Brush Script MT', cursive */
+
+    
+    /*to change font size*/
+    font-size: 1erm; /* 1rem=16px*/ 
+
+
+    /*to  decide that the font thixnes*/
+    font-weight: bold; /*can have value sa = blod /  bolder / lighter */
+    
+
+    /*the shadow of a text*/
+    text-shadow: 1rem 1rem 1rem red;    /*first number= x-axis  second number=y-axis (- --> go up , + --> go down)    third number=the ommite  then the color*/
+
+
+    /*how much parapragh do u want (they will be pragraph as colums of pragraps)*/
+    column-count: 3;
+
+    /*the gap after each colums*/
+    column-gap: 1rem;   /*it come after the column-count*/
+
+
+    /*take care of overflowing text with an ellipsis.*/
+    ellipsis{
+
+        tag{
+            white-space: nowrap; /*to make the text not go to the next line  - it will not work if the text is in the middle of the line  - nowrap/ wrap/ wrap-reverse    */
+            overflow: hidden;  /*to hide the text that go out of the tag - hidden/ visible / scroll */
+            resize: both; /*property in CSS allows an element to be resized both horizontally and vertically by the user. This works in conjunction with the overflow property—typically, you'll want overflow: auto; or overflow: hidden; for it to function properly.*/
+            text-overflow: ellipsis; /*to add the "..." at the end of the text that go out of the tag - clip / ellipsis / string */
+          }
+    }
+
+
+
+
+
+
+
+    /* the radias of the border*/
+    border-radius: 20%; /*50% will be as circle but it better to use rem or px*/
+
+
+    /*to decide the border style*/
+    border-style: double;   /* can have value as= dotted / dashed / solid / double / groove / ridge / inset / outset / and compnation as = outset double solid   (can be diceidec in "border" attrupute)  */
+
+
+    /*to decide the border width*/
+    border-width: 10px; /*can have value as= 10px / 10% / 10erm  (can be diceidec in "border" attrupute) */
+
+
+
+    /*to decide the border color*/
+    border-color: red; /*can have value as= red / #ff0000 / rgb(255, 0, 0) / rgba(255, 0, 0, 0.5) (can be diceidec in "border" attrupute) */
+
+
+    /*to use all the three value up*/
+    border: wheat 10px solid;
+   
+
+    /*to add shadow to the border */
+    box-shadow: 10px 10px 10px red; /*first number= x-axis  second number=y-axis (- --> go up , + --> go down)    third number=the ommite  then the color*/
+
+
+    /*to make the border as seprate or not  (usulay used with the table)  */
+    border-collapse: collapse; /* can have value = collapse / separated*/
+
+
+    /*the style of a list*/    
+    list-style-type: none; /*can have value as= none / disc / circle / square / decimal / decimal-leading-zero / lower-roman / upper-roman / lower-greek / lower-latin / upper-latin / armenian / georgian / lower-alpha / upper-alpha / none / inherit */
+
+    /*use for input, to reomve the otline of the unput when selected*/
+    outline:none;
+
+    /*show or hide an element without changing the layout of a document (that mean it position will be ocapaide by it self is just will not be seen) */
+    visibility: hidden; /*can have values=  visible / hidden / collapse / initial / inherit */
+
+    object-fit: cover; /*to decide how the content of an element should be resized to fit its container (it work with img and video) - it will not work if the element is not a block element (like img) - contain / cover / fill / none / scale-down */
+
+
+
+
+
+
+    /*sets the type of cursor, if any, to show when the mouse pointer is over an element*/
+    cursor:pointer ;  /*can have valuse=  auto / default / none / context-menu / help / pointer / progress / wait / cell / crosshair / text / vertical-text: / alias / copy / move / no-drop / not-allowed / grab / grabbing / specify custom images to use as the cursor (cursor: url('custom-cursor.png'), auto;) [with respect to SVG] */
+
+
+    /* removes an element from the normal document flow and pushes it to either the left or right side of its containing element */
+    float:left;
+
+
+
+
+
+    /*specifies the type of positioning method used for an element*/
+    position:static; /*can have value= static / relative / absolute / fixed / sticky */
+
+    /*offset: refers to the ability to move the element using top, bottom, left, or right properties. */
+
+
+    /*static  ---> default ---> no offset --->  Elements render in order, as they appear in the document flow (not affectied by top,...etc )*/
+    
+
+    /*relative             ---> offest ---> The element is positioned visvaula but it acual place in code will not change */
+
+
+    /*absolute             ---> offest  ---> The element is positioned and it place will be removed from the code (requre parent have any other value than static (the changes will start from the parents) - it will take the first parent that not static[in case of nested parents])*/
+
+
+    /*fixed                ---> offest  ---> the element is positioned and it place will be removed from the code (the changes start form view point (the browser page)) (the marggin get reverse in this)*/ 
+
+
+    /*sticky               ---> offest --->  the elemnt will be position and it will stick to the screen when it go to the offset value */
+    
+
+    position{
+
+
+        static{  
+            works-as:This is the default positioning for all elements,Elements appear in the normal document flow (default    normaley near each other);
+            
+            NO-offset: the element cant affected by top, bottom, left, or right properties;
+
+            /*You don't typically need to specify this unless you're overriding a different positioning value.*/
+        };
+
+        relative{
+            works-as: The element is positioned relative to its normal position, Other elements are not affected by its positioning (The space the element would normally occupy is preserved (it fisrt position is save and after it be relitive it can move freely));
+            
+            offset: the element affected by top, bottom, left, or right properties;
+
+        };
+
+
+        absolute{
+            works-as: The element is removed from the normal document flow,Its positioned relative to its nearest positioned ancestor (an ancestor with a position other than static) (first location will be taken after it be absloute then it take the place of ancester);
+
+            offset: the element affected by top, bottom, left, or right properties;
+        };
+
+        fixed{
+            works-as: the element is positioned relative to the viewport of the browser (it stay in the browser page and it will be fixed to the view point);
+
+            offset: the element affected by top, bottom, left, or right properties;
+        }
+
+
+        sticky{
+            works-as: the element is positioned relative to the nearest scrollable ancestor (it stay in the browser page and it will be fixed to the view point);
+
+            offset: the element affected by top, bottom, left, or right properties;
+        }
+    };
+
+
+
+
+    /*property that sets all the properties required for animating an element along a defined path*/
+    offset:left;/*can have value= top / right / bottom / left / center / 10px / 10% / 10erm */
+
+
+
+    /*set the content in diffrent layer in the z-axis*/
+    z-index: 5; /*the valuse is the number of the layers*/
+
+
+
+
+
+
+}
+
+
+custom properties{
+
+        /* syntax for declaring and accessing a custom property */
+
+    /*crating: */
+        --CUSTOM-PTOPERTY:RED;
+        --modal-border: 1px solid black;
+        --CULCLATION:calc(1rem + 16px);
+
+
+    /*access:*/
+    color: var( --CUSTOM-PTOPERTY);
+    border: var(--modal-border);
+    width: var(--CULCLATION);
+
+
+
+    /*fix the scope prblem by using root tag*/
+
+    :root{
+        --CUSTOM-PTOPERTY:RED;
+        --modal-border: 1px solid black;
+        --CULCLATION:calc(1rem + 16px);
+
+        /* now we can access these custom tags from any tag no need for declare them in the block of the tag*/
+    }
+
+
+
+    
+};
+
+
+
+
+
+Flexbox modeul{
+
+    /*every property here to work it need to be  dispaly:flex  or  display:inline-flex     -- add in the mother class*/
+
+
+    
+
+    /*attriput to controllin the layout */
+    display: flex;   /* can have values=  block / inline / none / flex / grid / inlin-block / inlin-flex /inlin-grid   (none=it will be like not exist, it position will be taken by other  )*/ 
+
+
+    /*used to align the flexible container’s " add space" (x-axis)*/
+    justify-content: center;     /*can have values=  flex-start / flex-end / center / space-around / space-between / space-evenly*/
+
+
+    /*used to align the flexible container’s (y-axis)*/
+    align-items: center; /*can have value= center / flex-start / flex-end / stretch / baseline  */
+
+    
+    /*used to align the flexible container’s items when the items do not use all available space on the main-axis*/
+    flex: 2;     /*shorthand for three properties: flex-grow, flex-shrink, and flex-basis  (When you write flex: 2;, it’s equivalent to writing flex: 2 1 0;)*/
+
+
+    /*to decide the direction of the flex*/
+    flex-direction: row; /*can have value= row / row-reverse / column / column-reverse */
+
+
+    /*used to specify whether flex items are forced onto a single line or can wrap onto multiple lines*/
+    flex-wrap:wrap;     /*can have value= wrap / wrap-reverse / nowrap */
+
+    
+    sensitive-case{
+
+        /*flex-direction  it value can control the axis of both  justify-content &  align-items */
+
+
+        /*case 1*/
+
+        /*When flex-direction=row  (the default) */
+
+        /*justify-content controls alignment along the x-axis (horizontal)*/
+
+        /*align-items controls alignment along the y-axis (vertical)*/
+
+
+
+        /*case 2*/
+
+        /*When flex-direction=column*/
+
+        /*justify-content now controls alignment along the y-axis (vertical)*/
+
+        /*align-items controls alignment along the x-axis (horizontal)*/
+
+    }
+
+}
+
+
+
+
+Grid modeul{
+    /*every property here to work it need to be  dispaly:grid  or  display:inline-grid */
+
+    /*to start the grid layout*/
+    display: grid; /*appled only on direct child*/
+
+    /*to add columns to the grid (it can have multivle of column )*/
+    grid-template-columns:100px 100px; /*and it will contrule the width to the grid*/
+
+    /*to add rows to the grid (it can have multivle of row )*/
+    grid-template-rows:100px 100px; /*and it will contrule the height to the grid*/
+
+    /*short hand for grid-template-rows and  grid-template-columns */
+    grid-template: 50px 50px / 50px 50px 50px; /*rows are defined before the slash AND columns are defined after the slash -  grid-template-rows / grid-template-columns   */
+
+    /*we can ensure any new tracks the implicit grid makes for extra content are set at values that we defined.*/
+    grid-auto-rows: 100px; /*any new rows to stay the same value as our explicit row track sizes*/
+
+    /*less common to want extra content added horizontally along the grid*/
+    grid-auto-flow: column;   grid-auto-columns: 100px; /*any new columns to stay the same value as our explicit column track sizes*/
+
+    /*to add gap between the grid -gap in x and y axis*/
+    gap: 10px;  
+    column-gap: 100px;  /*y axis only*/
+    row-gap: 100px;     /*x axis only*/
+
+    /*property values represent the column grid lines we wish it to start and end with.*/
+    grid-column-start: 1; /*the namper not base on the cells but it base on grid lines*/
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    /*shorthand for grid-column-start, grid-column-end | grid-row-start, and grid-row-end*/
+    grid-column: 1 / 3;  /* start / end */
+    grid-row: 1 / 3;
+
+
+
+
+    /*shorthand for grid-column and grid-row, even more*/
+    grid-area: 1 / 1 / 3 / 6;
+    /*  Row Start (1): The grid item starts at the first row line.
+        Column Start (1): The grid item starts at the first column line.
+        Row End (3): The grid item ends just before the third row line.
+        Column End (6): The grid item ends just before the sixth column line.*/
+
+    /*we can use grid-area for manage complex layouts*/
+
+    /* first: we name each cells(insted of number)*/
+    grid-template-areas:                                            /* 1             2             3             4             5             6   */
+    "living-room living-room living-room living-room living-room"   /* | living-room | living-room | living-room | living-room | living-room |  */
+    "living-room living-room living-room living-room living-room"   
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet bathroom kitchen kitchen";   /*5x5 grid*/
+
+    /*second: we assign them using the names insted of the numbers*/
+    #living-room {grid-area: living-room;}
+    #kitchen {grid-area: kitchen;}
+    #bedroom {grid-area: bedroom;}
+    #bathroom {grid-area: bathroom;}
+    #closet {grid-area: closet;}
+    
+
+
+
+
+}
+
+
+
+Grid VS Flexbox{
+
+    Flexbox{  
+        
+        /*
+            1-will culcalate the data base on only rows
+            2-can make the layout more randome like(row#1 have 3 boxes and each one have diffrent size ,and row#2 have 6 boxes and each one have diffrent size)
+            3- cant have overlaping (can have it but in tricy way)
+
+        */
+    }
+
+    Grid{
+        /*
+            1-will culcalate the data base on rows and volums
+            2-make the layout more resticte like(the number of boxes in row#1 same as boxes in row#2, and boxes cant be diffrent in shape (alwase like to each other in the shape))
+            3- can have overlaping
+        */
+    }
+
+    /*
+        so it recommanded to use both of them base of the case
+    */
+
+}
+
+
+
+
+
+
+Pseudo
+{
+
+    classes{
+        /*classes have only one ":" on them*/
+
+
+        /*to select the position of the "child" and do property to them*/ 
+        :nth-child(even){ } /*it accept word / number / argument*/               /*will count from the top - first child */
+
+
+        /*to select the position of the "child" and do property to them*/
+        :nth-last-child(even) { }  /*it accept word / number / argument*/        /*will count from the bottom - last child */
+
+
+
+
+        /*to select the same type as the "selecter" and do an property on them */
+        :nth-of-type(2) { }     /*it accept word / number / argument*/              /*will count from the top - first same type */
+
+
+        /*to select the same type as the "selecter" and do an property on them */
+        :nth-last-of-type(2) { }     /*it accept word / number / argument*/         /*will count from the bottom - last same type */
+
+
+
+
+        /*to select the first child of the parent and do an property on it */
+        :first-child { }  
+
+
+        /*to select the last child of the parent and do an property on it */
+        :last-child { }  
+
+
+
+
+
+    
+        /*when it active do the prperty*/
+        theTag:active{ } /*use mostly in a tag  (wich users can not see it) */
+
+
+        /*when it have the corser in top of it do aproperty*/
+        theTag:hover{ }  /*use mostly in a tag or to desgine*/
+
+
+        /*whan theTag have been viseted before do the prperty */
+        theTag:visited{ }  /*use mostly in a tag*/
+
+
+        /*the link it self do a propert*/
+        theTag:link{ } /*use mostly in a tag to do a desgine thing like color,bgcolor....etc*/
+
+
+        /*when theTag is focus(click by the mouse or the keybord hover it by tap or the keybord/mouse using it now ) do the prperty*/
+        theTag:focus{ }  /*mostly use with textarea (input element) */
+
+
+        /*if theTag get checked(slected) do a property*/    /*here we must use the lable with the input and link them together so it dont look ugly in the html. then in the css we will use the + signe to say to it do the input tag and the lable also (looks same as :checked + lable) */
+        theTag:checked{ }  /*mostly use with the (input stuf) radio/checkbox/option-in select  */    
+
+
+        /*if theTag is disabled do a property*/   /* if we have website and it one of its tags have mengment and no nedd to take the whole website down we can in html disabled it (adding the disabled attribute) , recomanded in css add aproperty to make it color gray to the user dont get confuse why it not working  */
+        theTag:disabled{ }  /*use mostly in input tags*/
+
+
+        /*if theTag is enabled do a property - it can be activated (selected, clicked on, typed into, etc.) or accept focus*/    /*we can add in in the html file as an attribute*/ 
+        theTag:enabled{ }  /*use mostly in input(select) tag*/   /*it can be good companation with the disabled*/
+
+
+        /*if theTag is empty(dont have no tag inside it nor a tex) do a property*/
+        theTag:empty{ }  /*i have not discover what the use of it, i think it usless*/
+
+
+        /* use with input to say to the user what u did i valid*/
+        thetag:valid{} /*use with border-color*/
+
+        /*use with input to say to the user what u did i invalid*/
+        thetag:invalid{} /*use with border-color, the input must be reqired to activeate*/
+
+        /* select and style an element that has received focus  (focus = it's selected by the user)*/
+        thetag:focus{}
+
+
+
+        /*there is more but i will not cover them*/
+
+    }
+
+
+
+    elements{
+        /*elements have two of "::" on them*/
+
+
+        /*sed to style the first letter of a text block ,and do an property on it */
+        ::first-letter  { }
+
+
+        /*used to style the first line of a text block ,and do an property on it*/
+        ::first-line { }
+
+
+        /*styles placeholder text in form fields ,and do an property on it*/
+        ::placeholder {}
+
+
+        /*there is more but i will not cover them*/
+    }
+
+}
+
+
+@-at{
+
+    /*@ symbol is used to introduce at-rules, which are CSS statements that instructs CSS how to behave*/
+
+
+
+
+    /* Used to apply styles depending on the result of one or more media queries */
+    @media() { } 
+
+    /*examples*/
+    @media(max-width: 100px) {     }  /*tablet=768      phone=400 */
+
+    @media(prefers-color-scheme: dark) {     }   /* using the user’s theme setting from their operating system or user agent (like a browser)*/
+   /* first added custom properties on the :root element outside of the media query.
+    This gives us a default theme in case a user doesn’t have a preference set on their OS or user agent, 
+    or if a browser doesn’t support the media query. In this case, we’re using our “light” theme colors as the default.
+     Then we added a prefers-color-scheme media query for when a user has a dark theme set in their preferences.*/
+
+
+    /*Used to import style rules from other style sheets or to import content from the web*/
+    @import() { } 
+
+
+    /*define the text in the computer so it easier*/
+    @font-face() { }
+    /*
+    create:
+    @font-face{
+            font-family: 'myFont';
+            src: url('Norse-Bold.otf');
+    }
+
+
+    use:
+     font-family: 'myFont';
+    */
+
+
+    /*Used to define a set of styles to be applied to an element at various stages of an animation*/
+    @keyframes() { }
+
+
+
+    /*Used to apply a set of styles only if the browser supports a certain feature*/
+    @supports() { } 
+
+
+};
+
+
+
+
+
+
+inline-TAG_VS_TAG{
+    /*to make and define the deffrent between tags have in it inline or dont(inline-grid - grid | inline-flex - flex   |....etc )*/
+
+    inline-TAG{
+        /* It behaves like an inline element, meaning it only takes up as much width as necessary and does not start on a new line.*/
+    }
+
+    TAG{
+        /*It behaves like a block element, meaning it takes up the full width available and starts on a new line.*/
+    }
+
+
+}
+
+
+
+
+
+
+CSS-identifiers{
+        /* identifiers : units are widely used in modern CSS for creating responsive, flexible, and dynamic layouts. They allow for more precise control over element sizing, positioning, and behavior across different devices and screen sizes. */
+
+        
+    Viewport units{ /*percentage of the full viewport that propert will take*/
+        vh : viewport height (ex hight 100vh);
+        vw : viewport width (ex width 100wh);
+    };
+
+
+
+    Percentage units{
+        /* %  */ percentage : percentage of the parent elements width or height (ex width 50%);
+    };
+
+
+
+    Relative units{ /*font-size:*/
+        rem : relative to the root element font size (ex font-size 1rem); /*most used*/
+        em : relative to the font-size of the element (ex font-size 1em);
+        fr : relative to the free space in the grid container (ex grid-template-columns 1fr 2fr); /*used in grid*/
+    };
+
+
+
+    Absolute units{
+        px : pixels (ex font-size 16px); /*most used*/
+        cm : centimeters (ex font-size 1cm);
+        mm : millimeters (ex font-size 1mm);
+        in : inches (ex font-size 1in);
+        pt : points (ex font-size 1pt);
+        pc : picas (ex font-size 1pc);
+    };
+
+
+
+
+    rem_vs_px{
+        rem: for font-size only;
+        px: for all other properties;
+
+        /* the resion to use px more is this (1rem = 16px), so if the user zoom in it will scale up base in multiplication of 16*/
+    }
+
+    use{
+        /*rem for font-size and px for all other properties*/
+        font-size: 1rem; /*1rem = 16px*/
+        width: 100px; /*100px = 100px*/
+        /* fr for grid*/
+        grid-template-columns: 1fr 2fr; /*1fr = 1/3 of the free space in the grid container*/
+        /* percent for width and height*/
+        width: 10%; /*10% = 10% of the parent element width*/
+    };
+
+
+
+    Positioning{
+        top : top position (ex top 10px);
+        right : right position (ex right 10px);
+        bottom : bottom position (ex bottom 10px);
+        left : left position (ex left 10px);
+        z-index : z-index position (ex z-index 1);
+    };
+
+
+
+
+    
+
+
+};
+
+
+
+
+
+
+
+Functions{
+
+        /*CSS does not allow us to create our own functions,they come with css.  These become important when thinking about responsive design.*/
+
+    /* one of the will know function in css is collring picker*/
+     color: rgba(0,0,0,0,);
+     background: linear-gradient(90deg, blue, red);
+
+
+
+     /* make the broswer culculate values for us */
+     font-size: calc();
+
+
+
+     /*to pick the appropeat choice*/
+     width: min(150px, 100%);
+     width: max(100px, 4em, 50%);
+
+
+     /*make elements fluid and responsive (determin the acceptable value -aka boundres)*/
+     font-size: clamp(smallest, ideal , largest);   /* font-size: clamp(1rem,1.5rem,2rem); */
+     /*
+         non-grid example:
+            width: clamp(500px, 80%, 1000px); -  will render with a width equal to 80% of its parent’s width, unless that number is lower than 500px or higher than 1000px, in which case it will use those numbers as its width.
+     */
+
+
+        /*to repeate thing if it requird*/
+       grid-template-columns:  repeat(3,3px);   /* grid-template-columns:  repeat(3,1fr); - grid-template-columns:  repeat(2,50%); */
+        /* grid-template-columns: repeat(5, max(120px, 15%));  - to make the grid responsive*/
+
+        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); - to make the grid responsive and the gird stay within its parent container
+            minmax()
+                minmax() is a CSS function that is specifically used with Grid. It can only be used with the following CSS properties:
+
+                grid-template-columns
+                grid-template-rows
+                grid-auto-columns
+                grid-auto-rows
+
+                 grid-template-columns: repeat(5, minmax(150px, 200px));
+
+                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  // the best way to make the grid responsive   - auto-fill will fill the row with as many columns as it can, while auto-fit will fit the columns into the row, even if there is not enough space for them(streach them).
+
+                  grid-template-rows: repeat(auto-fit, 1fr);
+        
+        */
+
+
+
+
+};
+
+
+
+animations {
+    
+    /* idont know if it worth to use it */
+    transform {
+        /* transform property takes in one or more CSS transform functions as its values. These functions are used to manipulate the element’s appearance and position on the page. */
+
+        /* rotates the element */
+        transform: rotate(90deg); /* rotates the element by 90 degrees */ 
+
+        /* scales(streaches) the element */
+        transform: scaleX(1.5); /* scales the element horizontally by 1.5 times its original size */
+        transform: scaleY(1.5); /* scales the element vertically by 1.5 times its original size */
+        transform: scale(1.5, 0.5); /* scales the element both horizontally and vertically by 1.5 and 0.5 times its original size respectively */
+        transform: scale(1.5); /* scales the element both horizontally and vertically by 1.5 times its original size respectively */
+
+        /* moves the element in 2D space */
+        transform: skewX(20deg); /* skews the element horizontally by 20 degrees */
+        transform: skewY(20deg); /* skews the element vertically by 20 degrees */
+        transform: skew(20deg, 20deg); /* skews the element both horizontally and vertically by 20 degrees */
+        transform: skew(20deg); /* skews the element both horizontally and vertically by 20 degrees */
+
+        /* moves the element */
+        transform: translateX(50px); /* moves the element 50 pixels to the right */
+        transform: translateY(50px); /* moves the element 50 pixels down */
+        transform: translate(100px, 100px); /* moves the element 100 pixels to the right and 100 pixels down */
+        transform: translate(100px); /* moves the element 100 pixels to the right and 100 pixels down */
+
+
+        /* chaining transform functions */
+        transform: translateX(50px) rotate(90deg); /* moves the element 50 pixels to the right and rotates it 90 degrees */
+
+        /*in 3d space*/
+        /*perspective() function is what gives your element that three-dimensional depth feeling—it’s like the camera lens through which you view the scene.*/
+        transform: perspective(100px) translateZ(50px) rotateY(90deg); /* applies a perspective of 100 pixels, moves the element 50 pixels towards the viewer, and rotates it 90 degrees around the Y-axis */
+                /*perspective(100px), it means the viewer is looking at the scene from 100 pixels away*/
+    }
+
+    transition {
+        /* transition property is used to create smooth animations between different states of an element (animate a change from an element’s initial state to an end state). It allows you to specify which properties should animate, the duration of the animation, and the timing function that controls the speed of the animation. */
+
+        transition: background-color 0.5s ease-in-out; /* animates the background color change over 0.5 seconds with an ease-in-out timing function */
+
+                    button {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 2% 5% 2% 5%;
+                background-color: white;
+                color: white;
+                transition: background-color 1s ease-out 0.25s; /* animates the background color change over 1 second with an ease-out timing function and a 0.25 second delay */
+                }
+
+                button:hover {
+                background-color: black;
+                cursor: pointer;
+                }
+
+            /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
+                 div {
+                width: 100px;
+                height: 100px;
+                transition: transform 2s 1s;
+                }
+
+                div:hover {
+                transform: rotate(180deg);
+                }
+    }
+
+
+
+    keyframes {
+        /* keyframes are used to define the intermediate steps in a CSS animation sequence by specifying the styles for the element at certain times. */
+             #ball {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border: 1px solid black;
+                border-radius: 50%;
+
+                animation-name: change-color; /* the name of the keyframes animation , it can be any name */
+                animation-duration: 2s; /* the duration of the animation , 2s means it will take 2 seconds to complete the animation */
+                animation-iteration-count: infinite; /* the number of times the animation should repeat , infinite means it will repeat forever , it can be a number like 3 or infinite */
+                animation-direction: alternate; /* the direction of the animation , alternate means it will play forwards and then backwards , it can be normal (play forwards only) or reverse (play backwards only) or alternate-reverse (play backwards and then forwards) */
+            }
+
+            @keyframes change-color { /* the keyframes animation */
+                from {
+                    background-color: red;
+                }
+
+                to {
+                    background-color: green;
+                }
+            }
+
+            /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
+      
+            #ball {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: red;
+                animation:  change-color 2s infinite alternate; /* combine the keyframes animation with the other properties of the animation */
+            }
+
+            @keyframes change-color {
+                from {
+                    background-color: red;
+                }
+                
+                50% {
+                    transform: scale(2) rotate(180deg);
+                    background-color: blue;
+                }
+
+                to {
+                    background-color: green;
+                }
+            }
+
+
+    }
+
+
+}
+
+
+Responseive {
+    /*to make the website responsive*/
+    general {
+        /*use max-width instead of width*/
+        max-width: 1200px;
+
+      /*dont use hight and width use paddding and margin*//
+
+ 
+    }
+
+    image {
+          /* use aspect-ratio instead of width and height*/
+        aspect-ratio: 16/9; /* 16 is the width and 9 is the height  */
+
+        /* use object-fit instead of width and height*/
+        object-fit: cover;
+
+        /* use background-size instead of width and height - dont works with img tag*/
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        /* use media queries to make the website responsive*/
+        /* use max-width instead of width*/
+        max-width: 768px;
+
+
+            @media (max-width: 800px) {
+                main {
+                    flex-direction: column;
+                }
+                header {
+                    text-align: center;
+                    padding: 24px
+                }
+                aside {
+                    width: auto;
+                }
+                ul {
+                    display: flex;
+                    gap: 16px;
+                    justify-content: center;
+                    padding: 0;
+                }
+            }
+
+
+            /*
+                modile <=800px  -- use only this and the normel mode
+                tablet <= 1200px
+                desktop >= 1200px  -- not important
+                other devices >=2000px
+            */
+
+        
+        
+    }
+}
+
+
