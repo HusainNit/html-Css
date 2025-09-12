@@ -1,0 +1,17 @@
+body {
+  width: 1800px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 12.5rem;
+  height: 12.5rem;
+  background-color: red;
+  clip-path: inset(20px 20px 30px 10px round 8px 8px 70px 8px);
+  /*  top right bottom left  round  top/left top/right bottm/right bottom/left  (or top_left/bottom_right  top_right/bottom_left */
+}

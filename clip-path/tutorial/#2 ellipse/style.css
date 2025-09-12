@@ -1,0 +1,17 @@
+body {
+  width: 1800px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 12.5rem;
+  height: 12.5rem;
+  background-color: red;
+  clip-path: ellipse(50% 30% at center);
+  /*  horizantel_shape_size  vertical_shape_size  at   x cordinate(from origonal shape)   y cordinate(from origonal shape) [coridnate is from left/top corner  also i can do {at left right}   ]*/
+}

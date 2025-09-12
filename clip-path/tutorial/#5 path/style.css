@@ -1,0 +1,27 @@
+body {
+  width: 1800px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 12.5rem;
+  height: 12.5rem;
+  background-color: red;
+  clip-path: path(
+    "M 10,40 L 70,40 A 10,10 0,1,0  80,30 L 80,10 A 10,10 0,0,1 90,0 L 140,0 A 10,10 0,0,1 150,10 L 150,190 A 10,10 0,0,1 140,200 L 10,200 A 10,10 0,0,1 0,190 L 0,50 A 10,10 0,0,1 10,40  Z"
+  );
+  /* 
+      M - the start of the path
+      Z - the end of the path
+      condiant - after the m add x,y cordinnates
+      L - for straingt line
+      A - for arch insted for straight lins  (raidesX,rediasY rotaion,largeFlagArch(0 or 1),weep(0 or 1)
+
+            every number is in px format
+  */
+}
