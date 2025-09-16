@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1800px;
+  height: 100vh;
+}
+
+.box {
+  height: 600px;
+  width: 600px;
+  background-color: aqua;
+  clip-path: path(
+    "M 100,100 L 200,100 A 50,50 0,0,0 250,50 L 250,40 A 50,50 0,0,1 300,0 L 600,0 L 600,600 L 0,600 L 0,200 A 150,150 0,0,1 100,100 Z"
+  );
+  border-radius: 20px;
+}
