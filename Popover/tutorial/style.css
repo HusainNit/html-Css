@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navButtons {
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sund {
+  padding: 5px 10px;
+  anchor-name: --profileButtons;
+}
+
+.moreCatagories {
+  border: 0;
+  background-color: gray;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin: 0;
+  position: absolute;
+  inset: auto;
+  position-anchor: --profileButtons;
+  top: anchor(bottom);
+  right: anchor(right);
+  margin-block-start: 5px;
+}
+
+.moreCatagories a {
+  margin: 10px 20px;
+}
+
+.moreCatagories:popover-open {
+  display: grid;
+}
